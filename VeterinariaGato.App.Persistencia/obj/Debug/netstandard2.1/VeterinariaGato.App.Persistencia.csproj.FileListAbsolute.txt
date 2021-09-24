@@ -1,0 +1,12 @@
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\bin\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.deps.json
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\bin\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.dll
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\bin\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.pdb
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.csprojAssemblyReference.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.AssemblyInfoInputs.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.AssemblyInfo.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.dll
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.pdb
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\bin\Debug\netstandard2.1\VeterinariaGato.App.Dominio.dll
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\bin\Debug\netstandard2.1\VeterinariaGato.App.Dominio.pdb
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Persistencia\obj\Debug\netstandard2.1\VeterinariaGato.App.Persistencia.csproj.CopyComplete

@@ -1,0 +1,9 @@
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\bin\Debug\netstandard2.0\VeterinariaGato.App.Dominio.deps.json
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\bin\Debug\netstandard2.0\VeterinariaGato.App.Dominio.dll
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\bin\Debug\netstandard2.0\VeterinariaGato.App.Dominio.pdb
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.csprojAssemblyReference.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.AssemblyInfoInputs.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.AssemblyInfo.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.dll
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Dominio\obj\Debug\netstandard2.0\VeterinariaGato.App.Dominio.pdb
