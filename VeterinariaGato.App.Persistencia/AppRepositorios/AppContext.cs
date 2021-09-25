@@ -10,8 +10,7 @@ namespace VeterinariaGato.App.Persistencia
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = VeterinariaGato.App" );
+                optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = VeterinariaGato.App" );
             }
         }
     }
