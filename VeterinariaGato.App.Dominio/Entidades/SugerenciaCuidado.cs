@@ -3,7 +3,8 @@ namespace VeterinariaGato.App.Dominio
 {
     public class SugerenciaCuidado
     {
-        public FechaHora FechaHora {get; set;}
+        public DateTime FechaHora {get; set;}
+        //public FechaHora FechaHora {get; set;}
         public string Descripcion {get; set;}
     }
 }

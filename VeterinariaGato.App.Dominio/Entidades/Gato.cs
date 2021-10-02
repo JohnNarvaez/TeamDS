@@ -1,15 +1,19 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace VeterinariaGato.App.Dominio
 {
     public class Gato
     {
+        [Key]
         public string Codigo {get; set;}
+
         public string Nombre {get; set;}
         public string Raza {get; set;}
         public string Color {get; set;}
         public string Edad {get; set;}
-
+                
         [ForeignKey("Veterinario")]
         public int Veterinario_id;
         public Veterinario Veterinario {get; set;}
