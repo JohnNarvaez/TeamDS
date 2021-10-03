@@ -1,0 +1,15 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailsModel
+@{
+}
+<h2>@Model.Gato.EnEspañol</h2>
+<div>
+    Id: @Model.Gato.Id
+</div>
+<div>
+    Ingles: @Model.Gato.EnIngles
+</div>
+<div>
+    Italiano: @Model.Gato.EnItaliano
+</div>
+<a asp-page="./List" class="btn-default">Lista de Gatos </a>

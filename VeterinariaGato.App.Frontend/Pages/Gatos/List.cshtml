@@ -1,0 +1,42 @@
+
+@page
+@model VeterinariaGato.App.Frontend.Pages.ListModel
+@{
+}
+
+
+<h1>Listado de Gatos</h1>
+<form method="get">
+    <div class="form-group">
+
+        <p>
+            Gatos: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+            <input type="submit" value="Filtrar" />
+        </p>
+</form>
+<table class="table">
+    
+    @foreach (var gato in Model.Gatos)
+    {
+        <tr>
+            <td>@gato.EnEspañol</td>
+            <td>@gato.EnIngles</td>
+            <td>@gato.EnItaliano</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-gatoId="@gato.Id">
+                    <i class="fas fa-info-circle fa-lg"></i </a>
+            </td>
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-gatoId="@gato.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a>
+            </td>
+
+
+
+        </tr>
+    }
+</table>
+
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar Gato</a>

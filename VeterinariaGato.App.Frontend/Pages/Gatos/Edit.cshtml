@@ -1,0 +1,25 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.EditModel
+@{
+}
+<h2>Edición de los Gatos :@Model.Gato.EnEspañol</h2>
+<form method="post">
+     <input type="hidden" asp-for="Gato.Id"/>
+    <div class="form-group">
+        <label asp-for="Gato.EnEspañol"></label>
+        <input asp-for="Gato.EnEspañol" class="form-control">
+        <span class="text-danger" asp-validation-for="Gato.EnEspañol"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gato.EnIngles"></label>
+        <input asp-for="Gato.EnIngles" class="form-control">
+        <span class="text-danger" asp-validation-for="Gato.EnIngles"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gato.EnItaliano"></label>
+        <input asp-for="Gato.EnItaliano" class="form-control">
+        <span class="text-danger" asp-validation-for="Gato.EnItaliano"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+<a asp-page="./List" class="btn-default">Lista de Gatos </a>
