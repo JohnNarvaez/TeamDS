@@ -15,6 +15,7 @@ namespace VeterinariaGato.App.Persistencia
         public DbSet<Veterinario> Veterinarios {get;set;}
                 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
         {
             if (!optionsBuilder.IsConfigured)
             {
@@ -24,14 +25,16 @@ namespace VeterinariaGato.App.Persistencia
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+          modelBuilder.Entity<Persona>().ToTable("Personas");
           modelBuilder.Entity<Enfermera>().ToTable("Enfermeras");
           modelBuilder.Entity<Gato>().ToTable("Gatos");
-          modelBuilder.Entity<Historia>().ToTable("Historias");
+          modelBuilder.Entity<Historia>().ToTable("Historias"); 
           modelBuilder.Entity<Propietario>().ToTable("Propietarios");
           modelBuilder.Entity<SignoVital>().ToTable("SignosVitales");
           modelBuilder.Entity<SugerenciaCuidado>().ToTable("SugerenciaCuidados");
           modelBuilder.Entity<Veterinario>().ToTable("Veterinarios");
 
         }
+        
     }
 } 

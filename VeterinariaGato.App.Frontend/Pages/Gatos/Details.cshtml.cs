@@ -20,7 +20,7 @@ namespace VeterinariaGato.App.Frontend.Pages
         }
         public IActionResult OnGet(int gatoId)
         {
-            Gato = repositorioGatos.GetGatoPorId(gatoId);
+            Gato = repositorioGatos.GetGatoPorCodigo(gatoId);
             if(Gato==null)
             {
                 return RedirectToPage("./NotFound");

@@ -19,11 +19,11 @@ namespace VeterinariaGato.App.Frontend.Pages
         {
             this.repositorioGatos = repositorioGatos;
         }
-        public IActionResult OnGet(int? gatoId)
+        public IActionResult OnGet(int? gatoCodigo)
         {
-            if (gatoId.HasValue)
+            if (gatoCodigo.HasValue)
             {
-                Gato = repositorioGatos.GetGatoPorId(gatoId.Value);
+                Gato = repositorioGatos.GetGatoPorCodigo(gatoCodigo.Value);
             }
             else
             {
@@ -44,7 +44,7 @@ namespace VeterinariaGato.App.Frontend.Pages
             {
                 return Page();
             }
-            if(Gato.Id>0)
+            if(Gato.Codigo>0)
             {
             Gato = repositorioGatos.Update(Gato);
             }

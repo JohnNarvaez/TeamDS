@@ -7,28 +7,26 @@ namespace VeterinariaGato.App.Dominio
     public class Gato
     {
         [Key]
-        public string Codigo {get; set;}
-
+        public int Codigo {get; set;}
         public string Nombre {get; set;}
         public string Raza {get; set;}
         public string Color {get; set;}
         public string Edad {get; set;}
-
-        public int Id {get;set;}
+        
         [Required, StringLength(50)]
         public string EnEspañol {get;set;}
-         [Required, StringLength(50)]
+        [Required, StringLength(50)]
         public string EnIngles {get;set;}
-         [Required, StringLength(50)]
+        [Required, StringLength(50)]
         public string EnItaliano {get;set;}
-        
-                
+
+                        
         [ForeignKey("Veterinario")]
         public int Veterinario_id;
         public Veterinario Veterinario {get; set;}
 
         [ForeignKey("SignoVital")]
-        public string SignoVital_id;
+        public int SignoVital_id;
         public SignoVital SignoVital {get; set;}
 
         [ForeignKey("Propietario")]
@@ -39,13 +37,19 @@ namespace VeterinariaGato.App.Dominio
         public int Enfermera_id;
         public Enfermera Enfermera {get; set;}
 
-        [ForeignKey("SugerenciaCuidado")]
-        public int SugerenciaCuidado_id;
-        public SugerenciaCuidado SugerenciaCuidado {get; set;}
-
         [ForeignKey("Historia")]
         public int Historia_id;
         public Historia Historia {get; set;}
+
+
+        /*
+        //[Required, StringLength(50)]
+        public string EnEspañol {get;set;}
+        //[Required, StringLength(50)]
+        public string EnIngles {get;set;}
+        //[Required, StringLength(50)]
+        public string EnItaliano {get;set;}
+        */
 
     }
 }

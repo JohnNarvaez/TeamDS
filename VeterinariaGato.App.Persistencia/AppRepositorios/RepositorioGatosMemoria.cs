@@ -13,16 +13,16 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
         {
             gatos = new List<Gato>()
             {
-                new Gato{Id=1,EnEspañol="Gato 1",EnIngles="Cat 1",EnItaliano="Gatto 1"},
-                new Gato{Id=2,EnEspañol="Gato 2",EnIngles="Cat 2",EnItaliano="Gatto 2"},
-                new Gato{Id=3,EnEspañol="Gato 3",EnIngles="Cat 3",EnItaliano="Gatto 3"}
+                new Gato{Codigo=1,EnEspañol="Gato 1",EnIngles="Cat 1",EnItaliano="Gatto 1"},
+                new Gato{Codigo=2,EnEspañol="Gato 2",EnIngles="Cat 2",EnItaliano="Gatto 2"},
+                new Gato{Codigo=3,EnEspañol="Gato 3",EnIngles="Cat 3",EnItaliano="Gatto 3"}
 
             };
         }
 
         public Gato Add(Gato nuevoGato)
         {
-           nuevoGato.Id=gatos.Max(r => r.Id) +1; 
+           nuevoGato.Codigo=gatos.Max(r => r.Codigo) +1; 
            gatos.Add(nuevoGato);
            return nuevoGato;
         }
@@ -32,9 +32,9 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             return gatos;
         }
 
-        public Gato GetGatoPorId(int gatoId)
+        public Gato GetGatoPorCodigo(int GatoCodigo)
         {
-            return gatos.SingleOrDefault(s => s.Id==gatoId);
+            return gatos.SingleOrDefault(s => s.Codigo==GatoCodigo);
         }
 
         public IEnumerable<Gato> GetGatosPorFiltro(string filtro=null) // el parámetro es opcional 
@@ -55,7 +55,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Gato Update(Gato gatoActualizado)
         {
-            var gato= gatos.SingleOrDefault(r => r.Id==gatoActualizado.Id);
+            var gato= gatos.SingleOrDefault(r => r.Codigo==gatoActualizado.Codigo);
             if (gato!=null)
             {
                 gato.EnEspañol = gatoActualizado.EnEspañol;
