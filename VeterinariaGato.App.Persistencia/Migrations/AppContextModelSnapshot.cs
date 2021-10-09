@@ -21,8 +21,10 @@ namespace VeterinariaGato.App.Persistencia.Migrations
 
             modelBuilder.Entity("VeterinariaGato.App.Dominio.Gato", b =>
                 {
-                    b.Property<string>("Codigo")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
@@ -51,9 +53,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                     b.Property<int>("Historia_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
@@ -64,9 +63,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SignoVital_id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SugerenciaCuidado_id")
                         .HasColumnType("int");
 
                     b.Property<int>("Veterinario_id")
@@ -81,8 +77,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                     b.HasIndex("Propietario_id");
 
                     b.HasIndex("SignoVital_id");
-
-                    b.HasIndex("SugerenciaCuidado_id");
 
                     b.HasIndex("Veterinario_id");
 
@@ -240,12 +234,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("VeterinariaGato.App.Dominio.SugerenciaCuidado", "SugerenciaCuidado")
-                        .WithMany()
-                        .HasForeignKey("SugerenciaCuidado_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("VeterinariaGato.App.Dominio.Veterinario", "Veterinario")
                         .WithMany()
                         .HasForeignKey("Veterinario_id")
@@ -259,8 +247,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                     b.Navigation("Propietario");
 
                     b.Navigation("SignoVital");
-
-                    b.Navigation("SugerenciaCuidado");
 
                     b.Navigation("Veterinario");
                 });

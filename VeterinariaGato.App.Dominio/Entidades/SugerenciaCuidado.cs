@@ -5,7 +5,7 @@ namespace VeterinariaGato.App.Dominio
     public class SugerenciaCuidado
     {
         [Key]
-        public int Id {get; set;}        
+        public int SugeCuidadoId {get; set;}        
         public DateTime FechaHora {get; set;}
         public string Descripcion {get; set;}
     }

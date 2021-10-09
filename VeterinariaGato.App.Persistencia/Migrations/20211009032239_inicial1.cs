@@ -3,22 +3,54 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace VeterinariaGato.App.Persistencia.Migrations
 {
-    public partial class todasEntidades : Migration
+    public partial class inicial1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Persona",
-                table: "Persona");
+            migrationBuilder.CreateTable(
+                name: "Personas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumeroTelefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Genero = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Personas", x => x.Id);
+                });
 
-            migrationBuilder.RenameTable(
-                name: "Persona",
-                newName: "Personas");
+            migrationBuilder.CreateTable(
+                name: "SignosVitales",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Signo = table.Column<int>(type: "int", nullable: false),
+                    Valor = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SignosVitales", x => x.Id);
+                });
 
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Personas",
-                table: "Personas",
-                column: "Id");
+            migrationBuilder.CreateTable(
+                name: "SugerenciaCuidados",
+                columns: table => new
+                {
+                    SugeCuidadoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SugerenciaCuidados", x => x.SugeCuidadoId);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Enfermeras",
@@ -55,35 +87,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SignosVitales",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Signo = table.Column<int>(type: "int", nullable: false),
-                    Valor = table.Column<float>(type: "real", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SignosVitales", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SugerenciaCuidados",
-                columns: table => new
-                {
-                    SugeCuidadoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SugerenciaCuidados", x => x.SugeCuidadoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -131,12 +134,12 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                 name: "Gatos",
                 columns: table => new
                 {
-                    Codigo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Codigo = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Raza = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Edad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Id = table.Column<int>(type: "int", nullable: false),
                     EnEspañol = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     EnIngles = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     EnItaliano = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -144,7 +147,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                     SignoVital_id = table.Column<int>(type: "int", nullable: false),
                     Propietario_id = table.Column<int>(type: "int", nullable: false),
                     Enfermera_id = table.Column<int>(type: "int", nullable: false),
-                    SugerenciaCuidado_id = table.Column<int>(type: "int", nullable: false),
                     Historia_id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -175,12 +177,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Gatos_SugerenciaCuidados_SugerenciaCuidado_id",
-                        column: x => x.SugerenciaCuidado_id,
-                        principalTable: "SugerenciaCuidados",
-                        principalColumn: "SugeCuidadoId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_Gatos_Veterinarios_Veterinario_id",
                         column: x => x.Veterinario_id,
                         principalTable: "Veterinarios",
@@ -207,11 +203,6 @@ namespace VeterinariaGato.App.Persistencia.Migrations
                 name: "IX_Gatos_SignoVital_id",
                 table: "Gatos",
                 column: "SignoVital_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Gatos_SugerenciaCuidado_id",
-                table: "Gatos",
-                column: "SugerenciaCuidado_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Gatos_Veterinario_id",
@@ -247,18 +238,8 @@ namespace VeterinariaGato.App.Persistencia.Migrations
             migrationBuilder.DropTable(
                 name: "SugerenciaCuidados");
 
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Personas",
-                table: "Personas");
-
-            migrationBuilder.RenameTable(
-                name: "Personas",
-                newName: "Persona");
-
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Persona",
-                table: "Persona",
-                column: "Id");
+            migrationBuilder.DropTable(
+                name: "Personas");
         }
     }
 }

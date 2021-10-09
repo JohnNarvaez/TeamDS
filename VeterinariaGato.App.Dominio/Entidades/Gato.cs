@@ -42,14 +42,5 @@ namespace VeterinariaGato.App.Dominio
         public Historia Historia {get; set;}
 
 
-        /*
-        //[Required, StringLength(50)]
-        public string EnEspañol {get;set;}
-        //[Required, StringLength(50)]
-        public string EnIngles {get;set;}
-        //[Required, StringLength(50)]
-        public string EnItaliano {get;set;}
-        */
-
     }
 }
