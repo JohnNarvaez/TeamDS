@@ -21,14 +21,14 @@ namespace VeterinariaGato.App.Frontend.Pages
 
       public ListModel(IRepositorioGatos repositorioGatos)
       {
-            this.repositorioGatos=repositorioGatos;
+        this.repositorioGatos=repositorioGatos;
       }
       
-        public void OnGet() //(string filtroBusqueda)
+        public void OnGet (string filtroBusqueda)
         {
-          //FiltroBusqueda=filtroBusqueda;
-          //Gatos=repositorioGatos.GetGatosPorFiltro(filtroBusqueda);
-          Gatos=repositorioGatos.GetAll();
+          FiltroBusqueda=filtroBusqueda;
+          Gatos=repositorioGatos.GetGatosPorFiltro(filtroBusqueda);
+          //Gatos=repositorioGatos.GetAll();
         }
     }
 }
