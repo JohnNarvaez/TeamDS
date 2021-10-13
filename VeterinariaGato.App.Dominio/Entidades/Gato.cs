@@ -13,11 +13,11 @@ namespace VeterinariaGato.App.Dominio
         public string Color {get; set;}
         public string Edad {get; set;}
         
-        [Required, StringLength(50)]
+        //[Required, StringLength(50)]
         public string EnEspañol {get;set;}
-        [Required, StringLength(50)]
+        //[Required, StringLength(50)]
         public string EnIngles {get;set;}
-        [Required, StringLength(50)]
+        //[Required, StringLength(50)]
         public string EnItaliano {get;set;}
 
                         

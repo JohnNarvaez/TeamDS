@@ -11,25 +11,24 @@ namespace VeterinariaGato.App.Frontend.Pages
 {
     public class ListModel : PageModel
     {
-       
-       private readonly IRepositorioGatos repositorioGatos;
-       public IEnumerable<Gato> Gatos {get;set;}
+         
+      private readonly IRepositorioGatos repositorioGatos;
+      public IEnumerable<Gato> Gatos {get;set;}
 
-       [BindProperty(SupportsGet =true)]
-       public string FiltroBusqueda { get; set; }
+      [BindProperty(SupportsGet =true)]
+      public string FiltroBusqueda { get; set; }
 
 
-       public ListModel(IRepositorioGatos repositorioGatos)
-       {
+      public ListModel(IRepositorioGatos repositorioGatos)
+      {
             this.repositorioGatos=repositorioGatos;
-       }
-       
-        public void OnGet(string filtroBusqueda)
+      }
+      
+        public void OnGet() //(string filtroBusqueda)
         {
-          
-          FiltroBusqueda=filtroBusqueda;
-          Gatos=repositorioGatos.GetGatosPorFiltro(filtroBusqueda);
-
+          //FiltroBusqueda=filtroBusqueda;
+          //Gatos=repositorioGatos.GetGatosPorFiltro(filtroBusqueda);
+          Gatos=repositorioGatos.GetAll();
         }
     }
 }

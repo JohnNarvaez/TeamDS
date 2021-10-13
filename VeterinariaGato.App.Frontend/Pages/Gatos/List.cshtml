@@ -19,22 +19,21 @@
     @foreach (var gato in Model.Gatos)
     {
         <tr>
+            
             <td>@gato.EnEspañol</td>
             <td>@gato.EnIngles</td>
             <td>@gato.EnItaliano</td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-gatoCodigo="@gato.Codigo">
-                    <i class="fas fa-info-circle fa-lg"></i </a>
+                    <i class="fas fa-info-circle fa-lg"></i> Detalle Gato 
+                </a>
             </td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-gatoCodigo="@gato.Codigo">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar Gato
                 </a>
-            </td>
-
-
-
+            </td> 
         </tr>
     }
 </table>
