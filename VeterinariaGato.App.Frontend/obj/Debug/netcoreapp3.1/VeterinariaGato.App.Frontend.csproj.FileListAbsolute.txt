@@ -82,3 +82,6 @@ C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\bin\Debug\netcor
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\bin\Debug\netcoreapp3.1\VeterinariaGato.App.Persistencia.dll
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\bin\Debug\netcoreapp3.1\VeterinariaGato.App.Dominio.pdb
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\bin\Debug\netcoreapp3.1\VeterinariaGato.App.Persistencia.pdb
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Details.cshtml.g.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Edit.cshtml.g.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\List.cshtml.g.cs
