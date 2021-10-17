@@ -2,14 +2,20 @@
 @model VeterinariaGato.App.Frontend.Pages.DetailsModel
 @{
 }
-<h2>@Model.Gato.EnEspañol</h2>
+<h2>@Model.Gato.Nombre</h2>
 <div>
-    Español: @Model.Gato.EnEspañol
+    Codigo: @Model.Gato.Codigo
 </div>
 <div>
-    Ingles: @Model.Gato.EnIngles
+    Nombre: @Model.Gato.Nombre
 </div>
 <div>
-    Italiano: @Model.Gato.EnItaliano
+    Raza: @Model.Gato.Raza
+</div>
+<div>
+    Color: @Model.Gato.Color
+</div>
+<div>
+    Edad: @Model.Gato.Edad
 </div>
 <a asp-page="./List" class="btn-default">Lista de Gatos </a>

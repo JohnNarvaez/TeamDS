@@ -13,9 +13,8 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
         {
             gatos = new List<Gato>()
             {
-                new Gato{Codigo=1,EnEspañol="Gato 1",EnIngles="Cat 1",EnItaliano="Gatto 1"},
-                new Gato{Codigo=2,EnEspañol="Gato 2",EnIngles="Cat 2",EnItaliano="Gatto 2"},
-                new Gato{Codigo=3,EnEspañol="Gato 3",EnIngles="Cat 3",EnItaliano="Gatto 3"}
+                new Gato{Codigo=1, Nombre="Rufus", Raza="Himalayo", Color="Marrón", Edad="2"},
+                new Gato{Codigo=2, Nombre="Pacho", Raza="Van turco", Color="Blanco", Edad="3"}
 
             };
         }
@@ -44,7 +43,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
                 {
-                    gatos = gatos.Where(s => s.EnEspañol.Contains(filtro)); 
+                    gatos = gatos.Where(s => s.Nombre.Contains(filtro)); 
                     /// <summary>
                     /// Filtra los mensajes que contienen el filtro
                     /// </summary>
@@ -58,9 +57,16 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             var gato= gatos.SingleOrDefault(r => r.Codigo==gatoActualizado.Codigo);
             if (gato!=null)
             {
-                gato.EnEspañol = gatoActualizado.EnEspañol;
-                gato.EnIngles=gatoActualizado.EnIngles;
-                gato.EnItaliano=gatoActualizado.EnItaliano;
+                gato.Codigo = gatoActualizado.Codigo;
+                gato.Nombre=gatoActualizado.Nombre;
+                gato.Raza=gatoActualizado.Raza;
+                gato.Color=gatoActualizado.Color;
+                gato.Edad=gatoActualizado.Edad;
+                gato.Veterinario=gatoActualizado.Veterinario;
+                gato.SignoVital=gatoActualizado.SignoVital;
+                gato.Propietario=gatoActualizado.Propietario;
+                gato.Enfermera=gatoActualizado.Enfermera;
+                gato.Historia=gatoActualizado.Historia;
             }
             return gato;
         }
