@@ -1,0 +1,16 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelSugerenciaCuidados
+@{
+}
+<h2>@Model.SugerenciaCuidado.SugeCuidadoId</h2>
+<div>
+    Id: @Model.SugerenciaCuidado.SugeCuidadoId
+</div>
+<div>
+    FechaHora: @Model.SugerenciaCuidado.FechaHora
+</div>
+<div>
+    Descripción: @Model.SugerenciaCuidado.Descripcion
+</div>
+
+<a asp-page="./List" class="btn-default">Sugerencia cuidado </a>

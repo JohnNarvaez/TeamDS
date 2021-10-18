@@ -1,0 +1,30 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelVeterinarios
+@{
+}
+<h2>@Model.Veterinario.Nombre</h2>
+<div>
+    Id: @Model.Veterinario.Id
+</div>
+<div>
+    Nombre: @Model.Veterinario.Nombre
+</div>
+<div>
+    Apellidos: @Model.Veterinario.Apellidos
+</div>
+<div>
+    NumeroTelefono: @Model.Veterinario.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.Veterinario.Genero
+</div>
+<div>
+    Especialidad: @Model.Veterinario.Especialidad
+</div>
+<div>
+    Codigo: @Model.Veterinario.Codigo
+</div>
+<div>
+    Registro: @Model.Veterinario.Registro
+</div>
+<a asp-page="./List" class="btn-default">Veterinarios </a>

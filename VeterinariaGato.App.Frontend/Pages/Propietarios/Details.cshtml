@@ -1,0 +1,24 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelPropietario
+@{
+}
+<h2>@Model.Propietario.Nombre</h2>
+<div>
+    Id: @Model.Propietario.Id
+</div>
+<div>
+    Nombre: @Model.Propietario.Nombre
+</div>
+<div>
+    Apellidos: @Model.Propietario.Apellidos
+</div>
+<div>
+    NumeroTelefono: @Model.Propietario.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.Propietario.Genero
+</div>
+<div>
+    Correo: @Model.Propietario.Correo
+</div>
+<a asp-page="./List" class="btn-default">Propietarios </a>

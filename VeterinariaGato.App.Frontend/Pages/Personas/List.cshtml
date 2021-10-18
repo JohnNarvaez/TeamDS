@@ -13,12 +13,19 @@
             <input type="submit" value="Filtrar" />
         </p>
 </form>
+
 <table class="table">
+    <tr>
+        <td>Id  </td>
+        <td>Nombre</td>
+        <td>Apellidos</td>
+        <td>Telefono</td>
+        <td>Genero</td>
+    </tr>
     
     @foreach (var persona in Model.Personas)
     {
         <tr>
-            
             <td>@persona.Id</td>
             <td>@persona.Nombre</td>
             <td>@persona.Apellidos</td>

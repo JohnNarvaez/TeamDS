@@ -1,0 +1,46 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.EditModelEnfermeras
+@{
+}
+<h2>Edición de Enfermeras:@Model.Enfermera.TarjetaProfecional</h2>
+<form method="post">
+     <input type="hidden" asp-for="Enfermera.TarjetaProfecional"/>
+     <div class="form-group">
+        <label asp-for="Enfermera.Id"></label>
+        <input asp-for="Enfermera.Id" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.Id"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.Nombre"></label>
+        <input asp-for="Enfermera.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.Nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.Apellidos"></label>
+        <input asp-for="Enfermera.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.Apellidos"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.NumeroTelefono"></label>
+        <input asp-for="Enfermera.NumeroTelefono" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.NumeroTelefono"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.Genero"></label>
+        <input asp-for="Enfermera.Genero" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.Genero"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.TarjetaProfecional"></label>
+        <input asp-for="Enfermera.TarjetaProfecional" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.TarjetaProfecional"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Enfermera.HorasLaboradas"></label>
+        <input asp-for="Enfermera.HorasLaboradas" class="form-control">
+        <span class="text-danger" asp-validation-for="Enfermera.HorasLaboradas"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+<a asp-page="./List" class="btn-default">Enfermeras </a>

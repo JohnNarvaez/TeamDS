@@ -1,0 +1,19 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelHistorias
+@{
+}
+<h2>@Model.Historia.Id</h2>
+<div>
+    Id: @Model.Historia.Id
+</div>
+<div>
+    Diagnostico: @Model.Historia.Diagnostico
+</div>
+<div>
+    Entorno: @Model.Historia.Entorno
+</div>
+<div>
+    Sugerencia cuidado: @Model.Historia.SugerenciaCuidado
+</div>
+
+<a asp-page="./List" class="btn-default">Historias </a>

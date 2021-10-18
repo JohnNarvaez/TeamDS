@@ -1,0 +1,19 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelSignosVitales
+@{
+}
+<h2>@Model.SignoVital.Id</h2>
+<div>
+    Id: @Model.SignoVital.Id
+</div>
+<div>
+    FechaHora: @Model.SignoVital.FechaHora
+</div>
+<div>
+    Signo: @Model.SignoVital.Signo
+</div>
+<div>
+    Valor: @Model.SignoVital.Valor
+</div>
+
+<a asp-page="./List" class="btn-default">Signos vitales </a>

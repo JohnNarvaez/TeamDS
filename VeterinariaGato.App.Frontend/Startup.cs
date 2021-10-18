@@ -27,6 +27,12 @@ namespace VeterinariaGato.App.Frontend
             services.AddRazorPages();
             services.AddSingleton<IRepositorioGatos, RepositorioGatosMemoria>();
             services.AddSingleton<IRepositorioPersonas, RepositorioPersonasMemoria>();
+            services.AddSingleton<IRepositorioEnfermeras, RepositorioEnfermerasMemoria>();
+            services.AddSingleton<IRepositorioHistorias, RepositorioHistoriasMemoria>();
+            services.AddSingleton<IRepositorioPropietarios, RepositorioPropietariosMemoria>();
+            services.AddSingleton<IRepositorioSignosVitales, RepositorioSignosVitalesMemoria>();
+            services.AddSingleton<IRepositorioSugerenciaCuidados, RepositorioSugerenciasCuidadoMemoria>();
+            services.AddSingleton<IRepositorioVeterinarios, RepositorioVeterinariosMemoria>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

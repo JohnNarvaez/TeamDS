@@ -1,0 +1,27 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.DetailModelEnfermeras
+@{
+}
+<h2>@Model.Enfermera.Nombre</h2>
+<div>
+    Id: @Model.Enfermera.Id
+</div>
+<div>
+    Nombre: @Model.Enfermera.Nombre
+</div>
+<div>
+    Apellidos: @Model.Enfermera.Apellidos
+</div>
+<div>
+    NumeroTelefono: @Model.Enfermera.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.Enfermera.Genero
+</div>
+<div>
+    Targeta profesional: @Model.Enfermera.TarjetaProfecional
+</div>
+<div>
+    Horas laboradas: @Model.Enfermera.HorasLaboradas
+</div>
+<a asp-page="./List" class="btn-default">Enfermeras</a>
