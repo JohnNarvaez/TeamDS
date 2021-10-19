@@ -1,10 +1,10 @@
 @page
-@model VeterinariaGato.App.Frontend.Pages.ListModelo
+@model VeterinariaGato.App.Frontend.Pages.ListModelHistorias
 @{
 }
 
-@*
-<h1>Personas</h1>
+
+<h1>Historias</h1>
 <form method="get">
     <div class="form-group">
 
@@ -16,37 +16,34 @@
 <table class="table">
     <tr>
         <td>Id  </td>
-        <td>Nombre</td>
-        <td>Apellidos</td>
-        <td>Telefono</td>
-        <td>Genero</td>
-        <td>Tarjeta P</td>
-        <td>H laboradas</td>
+        <td>Diagnostico</td>
+        <td>Entorno</td>
+        <td>Sug_cuidado</td>
+        
     </tr>
     
-    @foreach (var persona in Model.Personas)
+    @foreach (var historia in Model.Historias)
     {
         <tr>
             
-            <td>@persona.Id</td>
-            <td>@persona.Nombre</td>
-            <td>@persona.Apellidos</td>
-            <td>@persona.NumeroTelefono</td>
-            <td>@persona.Genero</td>
+            <td>@historia.Id</td>
+            <td>@historia.Diagnostico</td>
+            <td>@historia.Entorno</td>
+            <td>@historia.SugerenciaCuidado_id</td>
+            
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-info-circle fa-lg"></i> Detalle Persona 
+                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-HistoriaId="@historia.Id">
+                    <i class="fas fa-info-circle fa-lg"></i> Detalles
                 </a>
             </td>
 
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar persona
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-HistoriaId="@historia.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar
                 </a>
             </td> 
         </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar persona</a>
-*@
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar</a>

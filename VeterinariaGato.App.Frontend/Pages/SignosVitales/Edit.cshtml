@@ -1,0 +1,32 @@
+@page
+@model VeterinariaGato.App.Frontend.Pages.EditModelSignosVitales
+@{
+}
+
+<h2>Edición de signos vitales:@Model.SignoVital.Signo</h2>
+<form method="post">
+     <input type="hidden" asp-for="SignoVital.Id"/>
+     <div class="form-group">
+        <label asp-for="SignoVital.Id"></label>
+        <input asp-for="SignoVital.Id" class="form-control">
+        <span class="text-danger" asp-validation-for="SignoVital.Id"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SignoVital.FechaHora"></label>
+        <input asp-for="SignoVital.FechaHora" class="form-control">
+        <span class="text-danger" asp-validation-for="SignoVital.FechaHora"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SignoVital.Signo"></label>
+        <input asp-for="SignoVital.Signo" class="form-control">
+        <span class="text-danger" asp-validation-for="SignoVital.Signo"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SignoVital.Valor"></label>
+        <input asp-for="SignoVital.Valor" class="form-control">
+        <span class="text-danger" asp-validation-for="SignoVital.Valor"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+<a asp-page="./List" class="btn-default">SignosVitales </a>

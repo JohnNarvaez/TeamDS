@@ -94,12 +94,12 @@ C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcor
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\Details.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\Edit.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\List.cshtml.g.cs
-C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitalales\Details.cshtml.g.cs
-C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitalales\Edit.cshtml.g.cs
-C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitalales\List.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidados\Details.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidados\Edit.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidados\List.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\Details.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\Edit.cshtml.g.cs
 C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinarios\List.cshtml.g.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitales\Details.cshtml.g.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitales\Edit.cshtml.g.cs
+C:\Veterinaria\VeterinariaGato.App\VeterinariaGato.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SignosVitales\List.cshtml.g.cs

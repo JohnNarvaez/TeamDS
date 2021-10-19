@@ -1,38 +1,42 @@
 @page
-@model VeterinariaGato.App.Frontend.Pages.EditModelo
+@model VeterinariaGato.App.Frontend.Pages.EditModelPropietarios
 @{
 }
-@*
-<h2>Edición de personas:@Model.Persona.Nombre</h2>
+
+<h2>Edición de propietarios:@Model.Propietario.Nombre</h2>
 <form method="post">
-     <input type="hidden" asp-for="Persona.Id"/>
+     <input type="hidden" asp-for="Propietario.Id"/>
      <div class="form-group">
-        <label asp-for="Persona.Id"></label>
-        <input asp-for="Persona.Id" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Id"></span>
+        <label asp-for="Propietario.Id"></label>
+        <input asp-for="Propietario.Id" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.Id"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Persona.Nombre"></label>
-        <input asp-for="Persona.Nombre" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Nombre"></span>
+        <label asp-for="Propietario.Nombre"></label>
+        <input asp-for="Propietario.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.Nombre"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Persona.Apellidos"></label>
-        <input asp-for="Persona.Apellidos" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Apellidos"></span>
+        <label asp-for="Propietario.Apellidos"></label>
+        <input asp-for="Propietario.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.Apellidos"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Persona.NumeroTelefono"></label>
-        <input asp-for="Persona.NumeroTelefono" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.NumeroTelefono"></span>
+        <label asp-for="Propietario.NumeroTelefono"></label>
+        <input asp-for="Propietario.NumeroTelefono" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.NumeroTelefono"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Persona.Genero"></label>
-        <input asp-for="Persona.Genero" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Genero"></span>
+        <label asp-for="Propietario.Genero"></label>
+        <input asp-for="Propietario.Genero" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.Genero"></span>
+    </div>
+     <div class="form-group">
+        <label asp-for="Propietario.Correo"></label>
+        <input asp-for="Propietario.Correo" class="form-control">
+        <span class="text-danger" asp-validation-for="Propietario.Correo"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Grabar</button>
 </form>
-<a asp-page="./List" class="btn-default">Personas </a>
-*@
+<a asp-page="./List" class="btn-default">Propietarios </a>

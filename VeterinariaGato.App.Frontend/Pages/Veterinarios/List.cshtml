@@ -1,15 +1,14 @@
 @page
-@model VeterinariaGato.App.Frontend.Pages.ListModelo
+@model VeterinariaGato.App.Frontend.Pages.ListModelVeterinarios
 @{
 }
 
-@*
-<h1>Personas</h1>
+<h1>Veterinarios</h1>
 <form method="get">
     <div class="form-group">
 
         <p>
-            Personas: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+            Veterinarios: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
             <input type="submit" value="Filtrar" />
         </p>
 </form>
@@ -20,33 +19,36 @@
         <td>Apellidos</td>
         <td>Telefono</td>
         <td>Genero</td>
-        <td>Tarjeta P</td>
-        <td>H laboradas</td>
+        <td>Especialidad</td>
+        <td>Codigo</td>
+        <td>Registro</td>
     </tr>
     
-    @foreach (var persona in Model.Personas)
+    @foreach (var veterinario in Model.Veterinarios)
     {
         <tr>
             
-            <td>@persona.Id</td>
-            <td>@persona.Nombre</td>
-            <td>@persona.Apellidos</td>
-            <td>@persona.NumeroTelefono</td>
-            <td>@persona.Genero</td>
+            <td>@veterinario.Id</td>
+            <td>@veterinario.Nombre</td>
+            <td>@veterinario.Apellidos</td>
+            <td>@veterinario.NumeroTelefono</td>
+            <td>@veterinario.Genero</td>
+            <td>@veterinario.Especialidad</td>
+            <td>@veterinario.Codigo</td>
+            <td>@veterinario.Registro</td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-info-circle fa-lg"></i> Detalle Persona 
+                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-veterinarioId="@veterinario.Id">
+                    <i class="fas fa-info-circle fa-lg"></i> Detalles
                 </a>
             </td>
 
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar persona
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-veterinarioId="@veterinario.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar
                 </a>
             </td> 
         </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar persona</a>
-*@
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar</a>

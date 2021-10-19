@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VeterinariaGato.App.Dominio;
 using VeterinariaGato.App.Persistencia.AppRepositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -9,28 +5,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace VeterinariaGato.App.Frontend.Pages
 {
-    /*
-    public class EditModelo : PageModel
+    public class EditModelPropietarios : PageModel
     {
-        private readonly IRepositorioPersonas repositorioPersonas;
+        private readonly IRepositorioPropietarios repositorioPropietarios;
         [BindProperty]
-        public Persona Persona { get; set; }
+        public Propietario Propietario { get; set; }
 
-        public EditModelo(IRepositorioPersonas repositorioPersonas)
+        public EditModelPropietarios(IRepositorioPropietarios repositorioPropietarios)
         {
-            this.repositorioPersonas = repositorioPersonas;
+            this.repositorioPropietarios = repositorioPropietarios;
         }
-        public IActionResult OnGet(int? personaId)
+        public IActionResult OnGet(int? propietarioId)
         {
-            if (personaId.HasValue)
+            if (propietarioId.HasValue)
             {
-                Persona = repositorioPersonas.GetPersonaPorId(personaId.Value);
+                Propietario = repositorioPropietarios.GetPropietarioPorId(propietarioId.Value);
             }
             else
             {
-                Persona = new Persona();
+                Propietario = new Propietario();
             }
-            if (Persona == null)
+            if (Propietario == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -45,17 +40,17 @@ namespace VeterinariaGato.App.Frontend.Pages
             {
                 return Page();
             }
-            if(Persona.Id>0)
+            if(Propietario.Id>0)
             {
-            Persona = repositorioPersonas.Update(Persona);
+            Propietario = repositorioPropietarios.Update(Propietario);
             }
             else
             {
-             repositorioPersonas.Add(Persona);
+             repositorioPropietarios.Add(Propietario);
             }
             return Page();
         }
 
 
-    }*/
+    }
 }

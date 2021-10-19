@@ -7,9 +7,9 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
     {
         IEnumerable<Veterinario> GetAll();
         IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro);
-        Veterinario GetVeterinarioPorCodigo(string VeterinarioCodigo);
+        Veterinario GetVeterinarioPorId(int VeterinarioId);
         Veterinario Update(Veterinario VeterinarioActualizado);
         Veterinario Add(Veterinario nuevoVeterinario);
-      
+
     }
 }

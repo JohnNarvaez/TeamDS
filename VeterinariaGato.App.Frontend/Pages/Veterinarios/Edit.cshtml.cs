@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VeterinariaGato.App.Dominio;
 using VeterinariaGato.App.Persistencia.AppRepositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -9,28 +5,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace VeterinariaGato.App.Frontend.Pages
 {
-    /*
-    public class EditModelo : PageModel
+    public class EditModelVeterinarios : PageModel
     {
-        private readonly IRepositorioPersonas repositorioPersonas;
+        private readonly IRepositorioVeterinarios repositorioVeterinarios;
         [BindProperty]
-        public Persona Persona { get; set; }
+        public Veterinario Veterinario { get; set; }
 
-        public EditModelo(IRepositorioPersonas repositorioPersonas)
+        public EditModelVeterinarios(IRepositorioVeterinarios repositorioVeterinarios)
         {
-            this.repositorioPersonas = repositorioPersonas;
+            this.repositorioVeterinarios = repositorioVeterinarios;
         }
-        public IActionResult OnGet(int? personaId)
+        public IActionResult OnGet(int? veterinarioId)
         {
-            if (personaId.HasValue)
+            if (veterinarioId.HasValue)
             {
-                Persona = repositorioPersonas.GetPersonaPorId(personaId.Value);
+                Veterinario = repositorioVeterinarios.GetVeterinarioPorId(veterinarioId.Value);
             }
             else
             {
-                Persona = new Persona();
+                Veterinario = new Veterinario();
             }
-            if (Persona == null)
+            if (Veterinario == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -45,17 +40,17 @@ namespace VeterinariaGato.App.Frontend.Pages
             {
                 return Page();
             }
-            if(Persona.Id>0)
+            if(Veterinario.Id>0)
             {
-            Persona = repositorioPersonas.Update(Persona);
+            Veterinario = repositorioVeterinarios.Update(Veterinario);
             }
             else
             {
-             repositorioPersonas.Add(Persona);
+             repositorioVeterinarios.Add(Veterinario);
             }
             return Page();
         }
 
 
-    }*/
+    }
 }

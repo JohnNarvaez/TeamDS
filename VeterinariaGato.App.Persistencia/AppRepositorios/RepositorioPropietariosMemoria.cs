@@ -20,7 +20,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Propietario Add(Propietario nuevoPropietario)
         {
-           nuevoPropietario.Correo=propietarios.Max(r => r.Correo) +1; 
+           nuevoPropietario.Id=propietarios.Max(r => r.Id) +1; 
            propietarios.Add(nuevoPropietario);
            return nuevoPropietario;
         }
@@ -31,9 +31,10 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
         }
 
 
-        public Propietario GetPropietarioPorCorreo(string PropietarioCorreo)
+        public Propietario GetPropietarioPorId(int PropietarioId)
         {
-            return propietarios.SingleOrDefault(s => s.Correo==PropietarioCorreo);
+            return propietarios.SingleOrDefault(s => s.Id==PropietarioId);
+        
         }
 
         public IEnumerable<Propietario> GetPropietariosPorFiltro(string filtro)
@@ -43,7 +44,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
                 {
-                    propietarios = propietarios.Where(s => s.Correo.Contains(filtro)); 
+                    propietarios = propietarios.Where(s => s.Id.Equals(filtro)); 
                     /// <summary>
                     /// Filtra los mensajes que contienen el filtro
                     /// </summary>

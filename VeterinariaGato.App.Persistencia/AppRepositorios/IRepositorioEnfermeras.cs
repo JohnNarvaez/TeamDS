@@ -7,9 +7,9 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
     {
         IEnumerable<Enfermera> GetAll();
         IEnumerable<Enfermera> GetEnfermerasPorFiltro(string filtro);
-        Enfermera GetEnfermeraPorTarjetaProfecional(string EnfermeraTarjetaProfecional);
+        Enfermera GetEnfermeraPorId(int EnfermeraId);
         Enfermera Update(Enfermera EnfermeraActualizada);
         Enfermera Add(Enfermera nuevaEnfermera);
-      
+        
     }
 }

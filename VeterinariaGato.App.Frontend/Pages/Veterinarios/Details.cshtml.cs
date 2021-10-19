@@ -15,9 +15,9 @@ namespace VeterinariaGato.App.Frontend.Pages
         {
             this.repositorioVeterinarios = repositorioVeterinarios;
         }
-        public IActionResult OnGet(string VeterinarioCodigo)
+        public IActionResult OnGet(int VeterinarioId)
         {
-            Veterinario = repositorioVeterinarios.GetVeterinarioPorCodigo(VeterinarioCodigo);
+            Veterinario = repositorioVeterinarios.GetVeterinarioPorId(VeterinarioId);
             if(Veterinario==null)
             {
                 return RedirectToPage("./NotFound");

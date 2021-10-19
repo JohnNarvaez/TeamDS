@@ -35,18 +35,18 @@
             <td>@enfermera.TarjetaProfecional</td>
             <td>@enfermera.HorasLaboradas</td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-personaId="@enfermera.TarjetaProfecional">
-                    <i class="fas fa-info-circle fa-lg"></i> Detalle Enfermera 
+                <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-EnfermeraId="@enfermera.Id">
+                    <i class="fas fa-info-circle fa-lg"></i> Detalles
                 </a>
             </td>
 
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-personaId="@enfermera.TarjetaProfecional">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar Enfermera
+                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-EnfermeraId="@enfermera.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar
                 </a>
             </td> 
         </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar Enfermera</a>
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar</a>

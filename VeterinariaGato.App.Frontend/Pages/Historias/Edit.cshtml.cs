@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VeterinariaGato.App.Dominio;
 using VeterinariaGato.App.Persistencia.AppRepositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -9,28 +5,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace VeterinariaGato.App.Frontend.Pages
 {
-    /*
-    public class EditModelo : PageModel
+    public class EditModelHistorias : PageModel
     {
-        private readonly IRepositorioPersonas repositorioPersonas;
+        private readonly IRepositorioHistorias repositorioHistorias;
         [BindProperty]
-        public Persona Persona { get; set; }
+        public Historia Historia { get; set; }
 
-        public EditModelo(IRepositorioPersonas repositorioPersonas)
+        public EditModelHistorias(IRepositorioHistorias repositorioHistorias)
         {
-            this.repositorioPersonas = repositorioPersonas;
+            this.repositorioHistorias = repositorioHistorias;
         }
-        public IActionResult OnGet(int? personaId)
+        public IActionResult OnGet(int? historiaId)
         {
-            if (personaId.HasValue)
+            if (historiaId.HasValue)
             {
-                Persona = repositorioPersonas.GetPersonaPorId(personaId.Value);
+                Historia = repositorioHistorias.GetHistoriaPorId(historiaId.Value);
             }
             else
             {
-                Persona = new Persona();
+                Historia = new Historia();
             }
-            if (Persona == null)
+            if (Historia == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -45,17 +40,17 @@ namespace VeterinariaGato.App.Frontend.Pages
             {
                 return Page();
             }
-            if(Persona.Id>0)
+            if(Historia.Id>0)
             {
-            Persona = repositorioPersonas.Update(Persona);
+            Historia = repositorioHistorias.Update(Historia);
             }
             else
             {
-             repositorioPersonas.Add(Persona);
+             repositorioHistorias.Add(Historia);
             }
             return Page();
         }
 
 
-    }*/
+    }
 }

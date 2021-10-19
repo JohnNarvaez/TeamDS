@@ -33,17 +33,17 @@
             <td>@persona.Genero</td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-info-circle fa-lg"></i> Detalle Persona 
+                    <i class="fas fa-info-circle fa-lg"></i> Detalles
                 </a>
             </td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-personaId="@persona.Id">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar persona
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar 
                 </a>
             </td> 
         </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar persona</a>
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar</a>

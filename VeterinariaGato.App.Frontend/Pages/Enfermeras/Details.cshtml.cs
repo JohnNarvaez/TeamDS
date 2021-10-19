@@ -15,9 +15,9 @@ namespace VeterinariaGato.App.Frontend.Pages
         {
             this.repositorioEnfermeras = repositorioEnfermeras;
         }
-        public IActionResult OnGet(string EnfermeraTarjetaProfecional)
+        public IActionResult OnGet(int EnfermeraId)
         {
-            Enfermera = repositorioEnfermeras.GetEnfermeraPorTarjetaProfecional(EnfermeraTarjetaProfecional);
+            Enfermera = repositorioEnfermeras.GetEnfermeraPorId( EnfermeraId);
             if(Enfermera==null)
             {
                 return RedirectToPage("./NotFound");

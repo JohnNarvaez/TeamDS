@@ -14402,8 +14402,13 @@
   "RootNamespace": "VeterinariaGato.App.Frontend",
   "Documents": [
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignoVital\\Edit.cshtml",
-      "TargetPath": "Pages\\SignoVital\\Edit.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignosVitalales\\Edit.cshtml",
+      "TargetPath": "Pages\\SignosVitalales\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietarios\\Details.cshtml",
+      "TargetPath": "Pages\\Propietarios\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14412,18 +14417,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historia\\Edit.cshtml",
-      "TargetPath": "Pages\\Historia\\Edit.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historias\\Edit.cshtml",
+      "TargetPath": "Pages\\Historias\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietario\\Details.cshtml",
-      "TargetPath": "Pages\\Propietario\\Details.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciasCuidados\\Details.cshtml",
+      "TargetPath": "Pages\\SugerenciasCuidados\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinario\\Edit.cshtml",
-      "TargetPath": "Pages\\Veterinario\\Edit.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historias\\Details.cshtml",
+      "TargetPath": "Pages\\Historias\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14447,8 +14452,43 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciaCuidado\\List.cshtml",
-      "TargetPath": "Pages\\SugerenciaCuidado\\List.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historias\\List.cshtml",
+      "TargetPath": "Pages\\Historias\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietarios\\Edit.cshtml",
+      "TargetPath": "Pages\\Propietarios\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignosVitalales\\List.cshtml",
+      "TargetPath": "Pages\\SignosVitalales\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietarios\\List.cshtml",
+      "TargetPath": "Pages\\Propietarios\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermeras\\List.cshtml",
+      "TargetPath": "Pages\\Enfermeras\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermeras\\Details.cshtml",
+      "TargetPath": "Pages\\Enfermeras\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinarios\\Edit.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinarios\\List.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\List.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14462,11 +14502,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermera\\List.cshtml",
-      "TargetPath": "Pages\\Enfermera\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Gatos\\List.cshtml",
       "TargetPath": "Pages\\Gatos\\List.cshtml",
       "FileKind": "mvc"
@@ -14477,28 +14512,33 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historia\\List.cshtml",
-      "TargetPath": "Pages\\Historia\\List.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermeras\\Edit.cshtml",
+      "TargetPath": "Pages\\Enfermeras\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinario\\Details.cshtml",
-      "TargetPath": "Pages\\Veterinario\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietario\\Edit.cshtml",
-      "TargetPath": "Pages\\Propietario\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciaCuidado\\Details.cshtml",
-      "TargetPath": "Pages\\SugerenciaCuidado\\Details.cshtml",
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciasCuidados\\List.cshtml",
+      "TargetPath": "Pages\\SugerenciasCuidados\\List.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignosVitalales\\Details.cshtml",
+      "TargetPath": "Pages\\SignosVitalales\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinarios\\Details.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciasCuidados\\Edit.cshtml",
+      "TargetPath": "Pages\\SugerenciasCuidados\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14512,48 +14552,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermera\\Details.cshtml",
-      "TargetPath": "Pages\\Enfermera\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignoVital\\Details.cshtml",
-      "TargetPath": "Pages\\SignoVital\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Personas\\Edit.cshtml",
       "TargetPath": "Pages\\Personas\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SignoVital\\List.cshtml",
-      "TargetPath": "Pages\\SignoVital\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Propietario\\List.cshtml",
-      "TargetPath": "Pages\\Propietario\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Veterinario\\List.cshtml",
-      "TargetPath": "Pages\\Veterinario\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Historia\\Details.cshtml",
-      "TargetPath": "Pages\\Historia\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\SugerenciaCuidado\\Edit.cshtml",
-      "TargetPath": "Pages\\SugerenciaCuidado\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Veterinaria\\VeterinariaGato.App\\VeterinariaGato.App.Frontend\\Pages\\Enfermera\\Edit.cshtml",
-      "TargetPath": "Pages\\Enfermera\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],

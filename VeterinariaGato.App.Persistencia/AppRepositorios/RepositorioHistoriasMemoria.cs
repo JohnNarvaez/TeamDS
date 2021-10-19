@@ -11,8 +11,8 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public RepositorioHistoriasMemoria() => historias = new List<Historia>()
             {
-                new Historia{Id=100, Diagnostico="Hipotenso", Entorno="Indefinido"},
-                new Historia{Id=101, Diagnostico="Normotenso", Entorno="Indefinido"}
+                new Historia{Id=100, Diagnostico="Hipotenso", Entorno="Indefinido", SugerenciaCuidado_id=1},
+                new Historia{Id=101, Diagnostico="Normotenso", Entorno="Indefinido", SugerenciaCuidado_id=2}
                 
             };
 
@@ -56,7 +56,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             {
                 historia.Diagnostico= HistoriaActualizada.Diagnostico;
                 historia.Entorno = HistoriaActualizada.Entorno;
-                historia.SugerenciaCuidado = HistoriaActualizada.SugerenciaCuidado;
+                historia.SugerenciaCuidado_id = HistoriaActualizada.SugerenciaCuidado_id;
                                 
             }
             return historia;

@@ -20,7 +20,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Enfermera Add(Enfermera nuevaEnfermera)
         {
-           nuevaEnfermera.TarjetaProfecional=enfermeras.Max(r => r.TarjetaProfecional) +1; 
+           nuevaEnfermera.Id=enfermeras.Max(r => r.Id) +1; 
            enfermeras.Add(nuevaEnfermera);
            return nuevaEnfermera;
         }
@@ -30,10 +30,11 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             return enfermeras;
         }
 
-        public Enfermera GetEnfermeraPorTarjetaProfecional(string EnfermeraTarjetaProfecional)
+        public Enfermera GetEnfermeraPorId(int EnfermeraId)
         {
-            return enfermeras.SingleOrDefault(s => s.TarjetaProfecional==EnfermeraTarjetaProfecional);
+            return enfermeras.SingleOrDefault(s => s.Id==EnfermeraId);
         }
+
 
         public IEnumerable<Enfermera> GetEnfermerasPorFiltro(string filtro=null) // el parámetro es opcional 
         {
@@ -43,7 +44,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
                 {
-                    enfermeras = enfermeras.Where(s => s.TarjetaProfecional.Contains(filtro)); 
+                    enfermeras = enfermeras.Where(s => s.Id.Equals(filtro)); // Contains(filtro)); 
                     /// <summary>
                     /// Filtra los mensajes que contienen el filtro
                     /// </summary>
@@ -54,7 +55,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Enfermera Update(Enfermera EnfermeraActualizada)
         {
-            var enfermera= enfermeras.SingleOrDefault(r => r.TarjetaProfecional==EnfermeraActualizada.TarjetaProfecional);
+            var enfermera= enfermeras.SingleOrDefault(r => r.Id==EnfermeraActualizada.Id);
             if (enfermera!=null)
             {
                 enfermera.Nombre = EnfermeraActualizada.Nombre;

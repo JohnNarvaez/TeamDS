@@ -7,9 +7,9 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
     {
         IEnumerable<Propietario> GetAll();
         IEnumerable<Propietario> GetPropietariosPorFiltro(string filtro);
-        Propietario GetPropietarioPorCorreo(string PropietarioCorreo);
+        Propietario GetPropietarioPorId(int PropietarioId);
         Propietario Update(Propietario PropietarioActualizado);
         Propietario Add(Propietario nuevoPropietario);
-      
+        
     }
 }

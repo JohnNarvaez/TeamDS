@@ -13,8 +13,8 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
         {
             sugerenciaCuidados = new List<SugerenciaCuidado>()
             {
-                new SugerenciaCuidado{SugeCuidadoId=01, Descripcion="En construcción"},
-                new SugerenciaCuidado{SugeCuidadoId=02, Descripcion="En construcción"}                
+                new SugerenciaCuidado{SugeCuidadoId=01, FechaHora=DateTime.MaxValue, Descripcion="En construcción"},
+                new SugerenciaCuidado{SugeCuidadoId=02, FechaHora=DateTime.MaxValue, Descripcion="En construcción"}                
             };
         }
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VeterinariaGato.App.Dominio;
 using VeterinariaGato.App.Persistencia.AppRepositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -9,28 +5,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace VeterinariaGato.App.Frontend.Pages
 {
-    /*
-    public class EditModelo : PageModel
+    public class EditModelSugerenciaCuidados : PageModel
     {
-        private readonly IRepositorioPersonas repositorioPersonas;
+        private readonly IRepositorioSugerenciaCuidados repositorioSugerenciaCuidados;
         [BindProperty]
-        public Persona Persona { get; set; }
+        public SugerenciaCuidado SugerenciaCuidado { get; set; }
 
-        public EditModelo(IRepositorioPersonas repositorioPersonas)
+        public EditModelSugerenciaCuidados(IRepositorioSugerenciaCuidados repositorioSugerenciaCuidados)
         {
-            this.repositorioPersonas = repositorioPersonas;
+            this.repositorioSugerenciaCuidados = repositorioSugerenciaCuidados;
         }
-        public IActionResult OnGet(int? personaId)
+        public IActionResult OnGet(int? SugerenciaCuidadoSugeCuidadoId)
         {
-            if (personaId.HasValue)
+            if (SugerenciaCuidadoSugeCuidadoId.HasValue)
             {
-                Persona = repositorioPersonas.GetPersonaPorId(personaId.Value);
+                SugerenciaCuidado = repositorioSugerenciaCuidados.GetSugerenciaCuidadoPorSugeCuidadoId(SugerenciaCuidadoSugeCuidadoId.Value);
             }
             else
             {
-                Persona = new Persona();
+                SugerenciaCuidado = new SugerenciaCuidado();
             }
-            if (Persona == null)
+            if (SugerenciaCuidado == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -45,17 +40,17 @@ namespace VeterinariaGato.App.Frontend.Pages
             {
                 return Page();
             }
-            if(Persona.Id>0)
+            if(SugerenciaCuidado.SugeCuidadoId>0)
             {
-            Persona = repositorioPersonas.Update(Persona);
+            SugerenciaCuidado = repositorioSugerenciaCuidados.Update(SugerenciaCuidado);
             }
             else
             {
-             repositorioPersonas.Add(Persona);
+             repositorioSugerenciaCuidados.Add(SugerenciaCuidado);
             }
             return Page();
         }
 
 
-    }*/
+    }
 }

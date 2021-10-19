@@ -2,7 +2,7 @@
 @model VeterinariaGato.App.Frontend.Pages.DetailModelHistorias
 @{
 }
-<h2>@Model.Historia.Id</h2>
+<h2>@Model.Historia.Diagnostico</h2>
 <div>
     Id: @Model.Historia.Id
 </div>
@@ -13,7 +13,7 @@
     Entorno: @Model.Historia.Entorno
 </div>
 <div>
-    Sugerencia cuidado: @Model.Historia.SugerenciaCuidado
+    Sugerencia cuidado: @Model.Historia.SugerenciaCuidado_id
 </div>
 
 <a asp-page="./List" class="btn-default">Historias </a>

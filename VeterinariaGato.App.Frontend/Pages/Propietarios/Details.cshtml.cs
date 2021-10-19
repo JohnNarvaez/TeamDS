@@ -15,9 +15,9 @@ namespace VeterinariaGato.App.Frontend.Pages
         {
             this.repositorioPropietarios = repositorioPropietarios;
         }
-        public IActionResult OnGet(string PropietarioCorreo)
+        public IActionResult OnGet(int PropietarioId)
         {
-            Propietario = repositorioPropietarios.GetPropietarioPorCorreo(PropietarioCorreo);
+            Propietario = repositorioPropietarios.GetPropietarioPorId(PropietarioId);
             if(Propietario==null)
             {
                 return RedirectToPage("./NotFound");

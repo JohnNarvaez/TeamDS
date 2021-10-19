@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VeterinariaGato.App.Dominio;
 using VeterinariaGato.App.Persistencia.AppRepositorios;
 using Microsoft.AspNetCore.Mvc;
@@ -13,18 +9,20 @@ namespace VeterinariaGato.App.Frontend.Pages
     {
         private readonly IRepositorioEnfermeras repositorioEnfermeras;
         [BindProperty]
+       
         public Enfermera Enfermera { get; set; }
 
         public EditModelEnfermeras(IRepositorioEnfermeras repositorioEnfermeras)
         {
             this.repositorioEnfermeras = repositorioEnfermeras;
         }
-        /*
-        public IActionResult OnGet(string? EnfermeraTarjetaProfecional)
+        
+        public IActionResult OnGet(int? EnfermeraId)
         {
-            if (EnfermeraTarjetaProfecional.HasValue)
+            
+            if (EnfermeraId.HasValue)
             {
-                Enfermera = repositorioEnfermeras.GetEnfermeraPorTarjetaProfecional(EnfermeraTarjetaProfecional.Value);
+                Enfermera = repositorioEnfermeras.GetEnfermeraPorId(EnfermeraId.Value);
             }
             else
             {
@@ -35,19 +33,19 @@ namespace VeterinariaGato.App.Frontend.Pages
                 return RedirectToPage("./NotFound");
             }
             else
-                return Page();
+                return Page(); 
 
-        } */
+        } 
 
 
-        /* 
         public IActionResult OnPost()
         {
             if(!ModelState.IsValid)
             {
                 return Page();
             }
-            if(Enfermera.TarjetaProfecional>0)
+            
+            if(Enfermera.Id>0)
             {
             Enfermera = repositorioEnfermeras.Update(Enfermera);
             }
@@ -56,8 +54,6 @@ namespace VeterinariaGato.App.Frontend.Pages
              repositorioEnfermeras.Add(Enfermera);
             }
             return Page();
-        } */
-
-
+        } 
     }
 }

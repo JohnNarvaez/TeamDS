@@ -21,7 +21,11 @@
         <td>Raza</td>
         <td>Color</td>
         <td>Edad</td>
-        
+        <td>Veterinario</td>
+        <td>SignoVital</td>
+        <td>Propietario</td>
+        <td>Enfermera</td>
+        <td>Historia</td>
     </tr>
     
     @foreach (var gato in Model.Gatos)
@@ -33,19 +37,24 @@
             <td>@gato.Raza</td>
             <td>@gato.Color</td>
             <td>@gato.Edad</td>
+            <td>@gato.Veterinario_id</td>
+            <td>@gato.SignoVital_id</td>
+            <td>@gato.Propietario_id</td>
+            <td>@gato.Enfermera_id</td>
+            <td>@gato.Historia_id</td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-gatoCodigo="@gato.Codigo">
-                    <i class="fas fa-info-circle fa-lg"></i> Detalle Gato 
+                    <i class="fas fa-info-circle fa-lg"></i> Detalles
                 </a>
             </td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-gatoCodigo="@gato.Codigo">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar Gato
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i> Editar
                 </a>
             </td> 
         </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar Gato</a>
+<a asp-page=".\Edit" class="btn btn-primary">Adicionar</a>

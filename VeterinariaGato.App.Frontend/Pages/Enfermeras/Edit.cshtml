@@ -2,9 +2,9 @@
 @model VeterinariaGato.App.Frontend.Pages.EditModelEnfermeras
 @{
 }
-<h2>Edición de Enfermeras:@Model.Enfermera.TarjetaProfecional</h2>
+<h2>Edición de Enfermeras:@Model.Enfermera.Id</h2>
 <form method="post">
-     <input type="hidden" asp-for="Enfermera.TarjetaProfecional"/>
+     <input type="hidden" asp-for="Enfermera.Id"/>
      <div class="form-group">
         <label asp-for="Enfermera.Id"></label>
         <input asp-for="Enfermera.Id" class="form-control">

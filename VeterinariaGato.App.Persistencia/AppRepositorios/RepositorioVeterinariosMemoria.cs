@@ -21,7 +21,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Veterinario Add(Veterinario nuevoVeterinario)
         {
-           nuevoVeterinario.Codigo=veterinarios.Max(r => r.Codigo) +1; 
+           nuevoVeterinario.Id=veterinarios.Max(r => r.Id) +1; 
            veterinarios.Add(nuevoVeterinario);
            return nuevoVeterinario;
         }
@@ -31,11 +31,12 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
             return veterinarios;
         }
 
-        public Veterinario GetVeterinarioPorCodigo(string VeterinarioCodigo)
+        public Veterinario GetVeterinarioPorId(int VeterinarioId)
         {
-            return veterinarios.SingleOrDefault(s => s.Codigo==VeterinarioCodigo);
+            return veterinarios.SingleOrDefault(s => s.Id==VeterinarioId);
+       
         }
-      
+
         public IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro)
         {
             var veterinarios = GetAll(); // Obtiene todas los veterinarios
@@ -54,7 +55,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
 
         public Veterinario Update(Veterinario VeterinarioActualizado)
         {
-            var veterinario= veterinarios.SingleOrDefault(r => r.Codigo==VeterinarioActualizado.Codigo);
+            var veterinario= veterinarios.SingleOrDefault(r => r.Id==VeterinarioActualizado.Id);
             if (veterinario!=null)
             {
                 veterinario.Nombre = VeterinarioActualizado.Nombre;
@@ -62,6 +63,7 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
                 veterinario.NumeroTelefono = VeterinarioActualizado.NumeroTelefono;
                 veterinario.Genero = VeterinarioActualizado.Genero; 
                 veterinario.Especialidad = VeterinarioActualizado.Especialidad; 
+                veterinario.Codigo = VeterinarioActualizado.Codigo;
                 veterinario.Registro = VeterinarioActualizado.Registro; 
                 
             }

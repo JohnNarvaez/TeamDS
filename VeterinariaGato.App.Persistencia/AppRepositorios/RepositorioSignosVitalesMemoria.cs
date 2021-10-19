@@ -13,8 +13,8 @@ namespace VeterinariaGato.App.Persistencia.AppRepositorios
         {
             signosVitales= new List<SignoVital>()
             {
-                new SignoVital{Id=001, Signo=Signo.FrecuenciaCardiaca, Valor=60}, 
-                new SignoVital{Id=002, Signo=Signo.Temperatura, Valor=36}    
+                new SignoVital{Id=001, FechaHora=DateTime.MaxValue, Signo=Signo.FrecuenciaCardiaca, Valor=60}, 
+                new SignoVital{Id=002, FechaHora=DateTime.MinValue, Signo=Signo.Temperatura, Valor=36}    
                 //Falta implementar la fecha y hora             
             };
         }

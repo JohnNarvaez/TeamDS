@@ -1,38 +1,27 @@
 @page
-@model VeterinariaGato.App.Frontend.Pages.EditModelo
+@model VeterinariaGato.App.Frontend.Pages.EditModelSugerenciaCuidados
 @{
 }
-@*
-<h2>Edición de personas:@Model.Persona.Nombre</h2>
-<form method="post">
-     <input type="hidden" asp-for="Persona.Id"/>
-     <div class="form-group">
-        <label asp-for="Persona.Id"></label>
-        <input asp-for="Persona.Id" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Id"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Persona.Nombre"></label>
-        <input asp-for="Persona.Nombre" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Nombre"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Persona.Apellidos"></label>
-        <input asp-for="Persona.Apellidos" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Apellidos"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Persona.NumeroTelefono"></label>
-        <input asp-for="Persona.NumeroTelefono" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.NumeroTelefono"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Persona.Genero"></label>
-        <input asp-for="Persona.Genero" class="form-control">
-        <span class="text-danger" asp-validation-for="Persona.Genero"></span>
-    </div>
 
+<h2>Edición de sugerencias:@Model.SugerenciaCuidado.SugeCuidadoId</h2>
+<form method="post">
+     <input type="hidden" asp-for="SugerenciaCuidado.SugeCuidadoId"/>
+     <div class="form-group">
+        <label asp-for="SugerenciaCuidado.SugeCuidadoId"></label>
+        <input asp-for="SugerenciaCuidado.SugeCuidadoId" class="form-control">
+        <span class="text-danger" asp-validation-for="SugerenciaCuidado.SugeCuidadoId"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SugerenciaCuidado.FechaHora"></label>
+        <input asp-for="SugerenciaCuidado.FechaHora" class="form-control">
+        <span class="text-danger" asp-validation-for="SugerenciaCuidado.FechaHora"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SugerenciaCuidado.Descripcion"></label>
+        <input asp-for="SugerenciaCuidado.Descripcion" class="form-control">
+        <span class="text-danger" asp-validation-for="SugerenciaCuidado.Descripcion"></span>
+    </div>
+    
     <button type="submit" class="btn btn-primary">Grabar</button>
 </form>
-<a asp-page="./List" class="btn-default">Personas </a>
-*@
+<a asp-page="./List" class="btn-default">Sugerencias Cuidado</a>
